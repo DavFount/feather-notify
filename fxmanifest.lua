@@ -6,11 +6,12 @@ lua54 'yes'
 name 'feather-notify'
 description 'Default notification presentation provider for the Feather Framework'
 author 'Feather Framework'
-version '0.1.0'
+version '0.2.0'
 
 shared_scripts {
     'config.lua',
-    'shared/results.lua'
+    'shared/results.lua',
+    'shared/contract.lua'
 }
 
 server_script 'server/main.lua'

@@ -1,0 +1,18 @@
+name: Contract validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        run: sudo apt-get update && sudo apt-get install --yes lua5.4
+      - name: Validate Notify Contract 1
+        run: lua5.4 tests/contract_validation.lua
